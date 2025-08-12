@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason Acoca - Strategic Revenue Operations</title>
+    <meta name="description" content="Elite strategic operator for premium D2C and CPG brands. Revenue engineering at enterprise scale.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 8s ease-in-out infinite',
+                        'glow': 'glow 3s ease-in-out infinite alternate',
+                        'slide-up': 'slideUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
+                        'fade-in': 'fadeIn 1.2s ease-out forwards',
+                        'scale-in': 'scaleIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
+                        'shimmer': 'shimmer 2s linear infinite',
+                        'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px) rotate(0deg) scale(1)' },
+                            '25%': { transform: 'translateY(-40px) rotate(90deg) scale(1.2)' },
+                            '50%': { transform: 'translateY(-20px) rotate(180deg) scale(0.8)' },
+                            '75%': { transform: 'translateY(-35px) rotate(270deg) scale(1.1)' }
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 20px rgba(99, 102, 241, 0.3), 0 0 40px rgba(139, 92, 246, 0.1)' },
+                            '100%': { boxShadow: '0 0 40px rgba(99, 102, 241, 0.6), 0 0 80px rgba(139, 92, 246, 0.3)' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(60px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        scaleIn: {
+                            '0%': { transform: 'scale(0.9)', opacity: '0' },
+                            '100%': { transform: 'scale(1)', opacity: '1' }
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-200% 0' },
+                            '100%': { backgroundPosition: '200% 0' }
+                        },
+                        pulseGlow: {
+                            '0%, 100%': { boxShadow: '0 0 20px rgba(99, 102, 241, 0.4)' },
+                            '50%': { boxShadow: '0 0 40px rgba(99, 102, 241, 0.8), 0 0 60px rgba(139, 92, 246, 0.4)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: radial-gradient(ellipse at top, #1e1b4b 0%, #0f0f23 50%, #000000 100%);
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        .glass-strong {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 
+                0 12px 40px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.15),
+                inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 
+                0 10px 35px rgba(0, 0, 0, 0.35),
+                inset 0 1px 0 rgba(255, 255, 255, 0.12);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(99, 102, 241, 0.3);
+            transform: translateY(-8px);
+            box-shadow: 
+                0 20px 60px rgba(0, 0, 0, 0.4),
+                0 0 40px rgba(99, 102, 241, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.15);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 35%, #ec4899 70%, #f59e0b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gradient-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .gradient-bg:hover::before {
+            left: 100%;
+        }
+
+        .floating-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(3px);
+            animation: float 15s ease-in-out infinite;
+            opacity: 0.15;
+            background: linear-gradient(45deg, currentColor, transparent, currentColor);
+        }
+
+        .nav-blur {
+            backdrop-filter: blur(30px);
+            background: rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        .interactive-card {
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .interactive-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .interactive-card:hover::before {
+            left: 100%;
+        }
+
+        .metric-counter {
+            font-variant-numeric: tabular-nums;
+        }
+
+        .shimmer-text {
+            background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899, #6366f1);
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        .input-glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .input-glass:focus {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(99, 102, 241, 0.5);
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+        }
+
+        .timeline-line {
+            background: linear-gradient(to bottom, #6366f1, #8b5cf6, #ec4899);
+            width: 2px;
+            opacity: 0.6;
+        }
+
+        .service-icon {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2));
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .text-shadow-glow {
+            text-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+        }
+
+        .button-hover-effect {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .button-hover-effect:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+        }
+
+        .contact-button {
+            transition: all 0.3s ease;
+        }
+
+        .contact-button:hover {
+            transform: translateY(-3px) scale(1.05);
+        }
+    </style>
+</head>
+<body class="font-sans text-white relative">
+    <!-- Floating Background Elements -->
+    <div class="floating-orb w-96 h-96 bg-indigo-500 top-20 -left-20" style="animation-delay: 0s;"></div>
+    <div class="floating-orb w-64 h-64 bg-purple-500 top-1/2 -right-10" style="animation-delay: 3s;"></div>
+    <div class="floating-orb w-48 h-48 bg-pink-500 bottom-20 left-1/4" style="animation-delay: 6s;"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 nav-blur transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div>
+                    <div class="font-bold text-2xl gradient-text">Jason Acoca</div>
+                    <div class="flex items-center mt-1">
+                        <div class="flex text-amber-400 text-sm mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-xs text-gray-400">4.9 • Strategic Operations</span>
+                    </div>
+                </div>
+                <div class="hidden lg:flex space-x-4">
+                    <a href="#home" class="nav-link relative group py-2 px-3 rounded-lg transition-all duration-300 hover:bg-white/5">
+                        Home
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#story" class="nav-link relative group py-2 px-3 rounded-lg transition-all duration-300 hover:bg-white/5">
+                        Story
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#approach" class="nav-link relative group py-2 px-3 rounded-lg transition-all duration-300 hover:bg-white/5">
+                        Approach
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#calculator" class="nav-link relative group py-2 px-3 rounded-lg transition-all duration-300 hover:bg-white/5">
+                        Calculator
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#services" class="nav-link relative group py-2 px-3 rounded-lg transition-all duration-300 hover:bg-white/5">
+                        Services
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#results" class="nav-link relative group py-2 px-3 rounded-lg transition-all duration-300 hover:bg-white/5">
+                        Results
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#contact" class="nav-link relative group py-2 px-3 rounded-lg transition-all duration-300 hover:bg-white/5">
+                        Contact
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </div>
+                <a href="#contact" class="gradient-bg text-white px-6 py-3 rounded-full button-hover-effect font-semibold relative z-10">
+                    <i class="fas fa-rocket mr-2"></i>Let's Talk
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Refined and Smaller -->
+    <section id="home" class="min-h-screen flex items-center justify-center px-6 lg:px-8 relative">
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <div class="animate-fade-in">
+                <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight text-shadow-glow">
+                    Strategic <span class="shimmer-text">Revenue</span><br>
+                    <span class="gradient-text">Engineering</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-8 font-light max-w-3xl mx-auto">
+                    Architecting growth systems for premium D2C and CPG brands
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                    <a href="#story" class="gradient-bg text-white px-8 py-4 rounded-full button-hover-effect font-bold text-lg relative z-10">
+                        <i class="fas fa-arrow-right mr-2"></i>Discover My Approach
+                    </a>
+                    <a href="#calculator" class="glass-card px-8 py-4 rounded-full font-bold text-lg interactive-card">
+                        <i class="fas fa-calculator mr-2"></i>Calculate Potential
+                    </a>
+                </div>
+                <div class="glass p-4 rounded-xl inline-block">
+                    <p class="text-sm text-gray-400 flex items-center">
+                        <i class="fas fa-shield-alt mr-2 text-green-400"></i>
+                        Confidential operations • 8-figure results • Decade of expertise
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story" class="py-20 px-6 lg:px-8 relative">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-8">
+                <span class="glass px-6 py-2 rounded-full text-sm font-medium text-indigo-300 border border-indigo-500/30 mb-6 inline-block">
+                    <i class="fas fa-user mr-2"></i>Behind the Results
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 gradient-text">The Strategic Mind</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                <div class="glass-strong p-8 rounded-3xl">
+                    <h3 class="text-2xl font-bold mb-6 text-white">From Operator to Architect</h3>
+                    <div class="space-y-4 text-gray-300">
+                        <p class="leading-relaxed">
+                            I've spent the last decade in the trenches of high-growth D2C and CPG brands, witnessing the same patterns repeat: brilliant products held back by fragmented growth strategies.
+                        </p>
+                        <p class="leading-relaxed">
+                            While others focus on individual tactics, I engineer complete revenue ecosystems. My approach combines deep operational experience with strategic thinking to create sustainable, scalable growth systems.
+                        </p>
+                        <p class="leading-relaxed">
+                            Every brand I work with becomes a case study in systematic excellence—not through luck, but through methodical optimization of every revenue touchpoint.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="glass-card p-6 rounded-2xl interactive-card">
+                        <div class="flex items-center mb-4">
+                            <div class="service-icon w-12 h-12 rounded-xl flex items-center justify-center mr-4">
+                                <i class="fas fa-brain text-xl text-indigo-400"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-white">Systems Thinking</h4>
+                        </div>
+                        <p class="text-gray-300">Revenue isn't about individual channels—it's about orchestrating an entire ecosystem where every element amplifies the others.</p>
+                    </div>
+                    
+                    <div class="glass-card p-6 rounded-2xl interactive-card">
+                        <div class="flex items-center mb-4">
+                            <div class="service-icon w-12 h-12 rounded-xl flex items-center justify-center mr-4">
+                                <i class="fas fa-microscope text-xl text-purple-400"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-white">Data-Driven Precision</h4>
+                        </div>
+                        <p class="text-gray-300">Every decision backed by data, every optimization measured, every strategy validated through rigorous testing and analysis.</p>
+                    </div>
+                    
+                    <div class="glass-card p-6 rounded-2xl interactive-card">
+                        <div class="flex items-center mb-4">
+                            <div class="service-icon w-12 h-12 rounded-xl flex items-center justify-center mr-4">
+                                <i class="fas fa-rocket text-xl text-pink-400"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-white">Scale-First Mindset</h4>
+                        </div>
+                        <p class="text-gray-300">Building systems that don't just work today, but scale autonomously as your brand grows from millions to tens of millions.</p>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+    </section>
+
+    <!-- How I Help Brands Section -->
+    <section id="approach" class="py-20 px-6 lg:px-8 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-8">
+                <span class="glass px-6 py-2 rounded-full text-sm font-medium text-purple-300 border border-purple-500/30 mb-6 inline-block">
+                    <i class="fas fa-lightbulb mr-2"></i>Strategic Methodology
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 gradient-text">How I Transform Brands</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    My systematic approach to engineering sustainable, profitable growth
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-3xl interactive-card text-center group">
+                    <div class="service-icon w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-search text-2xl text-indigo-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 gradient-text">Deep Diagnosis</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        I don't just look at metrics—I dissect your entire revenue architecture to identify the hidden bottlenecks and untapped opportunities that others miss.
+                    </p>
+                </div>
+                
+                <div class="glass-card p-8 rounded-3xl interactive-card text-center group">
+                    <div class="service-icon w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-cogs text-2xl text-purple-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 gradient-text">System Architecture</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Building interconnected growth systems where SEO feeds paid media, retention amplifies acquisition, and every touchpoint is optimized for maximum impact.
+                    </p>
+                </div>
+                
+                <div class="glass-card p-8 rounded-3xl interactive-card text-center group">
+                    <div class="service-icon w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-chart-line text-2xl text-green-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 gradient-text">Continuous Optimization</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Implementing feedback loops and testing frameworks that ensure your growth systems evolve and improve autonomously, even when I'm not actively involved.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-12 glass-strong p-8 rounded-3xl">
+                <div class="text-center mb-8">
+                    <h3 class="text-3xl font-bold gradient-text mb-4">The Difference: Strategic vs. Tactical</h3>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="glass p-6 rounded-2xl border-l-4 border-red-500">
+                        <h4 class="text-xl font-bold text-red-400 mb-4 flex items-center">
+                            <i class="fas fa-times-circle mr-3"></i>Typical Approach
+                        </h4>
+                        <ul class="space-y-2 text-gray-300">
+                            <li class="flex items-center"><i class="fas fa-minus mr-3 text-red-400"></i>Optimize individual channels in isolation</li>
+                            <li class="flex items-center"><i class="fas fa-minus mr-3 text-red-400"></i>Focus on short-term metric improvements</li>
+                            <li class="flex items-center"><i class="fas fa-minus mr-3 text-red-400"></i>React to problems as they arise</li>
+                            <li class="flex items-center"><i class="fas fa-minus mr-3 text-red-400"></i>Require constant hands-on management</li>
+                        </ul>
+                    </div>
+                    <div class="glass p-6 rounded-2xl border-l-4 border-green-500">
+                        <h4 class="text-xl font-bold text-green-400 mb-4 flex items-center">
+                            <i class="fas fa-check-circle mr-3"></i>My Strategic Approach
+                        </h4>
+                        <ul class="space-y-2 text-gray-300">
+                            <li class="flex items-center"><i class="fas fa-plus mr-3 text-green-400"></i>Engineer interconnected growth ecosystems</li>
+                            <li class="flex items-center"><i class="fas fa-plus mr-3 text-green-400"></i>Build sustainable competitive advantages</li>
+                            <li class="flex items-center"><i class="fas fa-plus mr-3 text-green-400"></i>Anticipate and prevent future bottlenecks</li>
+                            <li class="flex items-center"><i class="fas fa-plus mr-3 text-green-400"></i>Create self-optimizing systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+    </section>
+
+    <!-- Revenue Calculator -->
+    <section id="calculator" class="py-20 px-6 lg:px-8 relative">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-8">
+                <span class="glass px-6 py-2 rounded-full text-sm font-medium text-amber-300 border border-amber-500/30 mb-6 inline-block">
+                    <i class="fas fa-calculator mr-2"></i>Revenue Intelligence
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 gradient-text">Growth Potential Calculator</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    See what systematic optimization could mean for your revenue
+                </p>
+            </div>
+            
+            <div class="glass-strong p-8 rounded-3xl">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-lg font-semibold mb-3 text-purple-200 flex items-center">
+                                <i class="fas fa-dollar-sign mr-2 text-green-400"></i>
+                                Current Monthly Revenue
+                            </label>
+                            <input type="number" id="currentRevenue" placeholder="500000" 
+                                   class="w-full p-4 rounded-xl input-glass text-white text-lg focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-lg font-semibold mb-3 text-purple-200 flex items-center">
+                                <i class="fas fa-percentage mr-2 text-blue-400"></i>
+                                Conversion Rate (%)
+                            </label>
+                            <input type="number" id="currentCR" placeholder="2.8" step="0.1" 
+                                   class="w-full p-4 rounded-xl input-glass text-white text-lg focus:outline-none">
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-lg font-semibold mb-3 text-purple-200 flex items-center">
+                                <i class="fas fa-shopping-cart mr-2 text-purple-400"></i>
+                                Average Order Value
+                            </label>
+                            <input type="number" id="currentAOV" placeholder="125" 
+                                   class="w-full p-4 rounded-xl input-glass text-white text-lg focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-lg font-semibold mb-3 text-purple-200 flex items-center">
+                                <i class="fas fa-users mr-2 text-pink-400"></i>
+                                Monthly Visitors
+                            </label>
+                            <input type="number" id="monthlyTraffic" placeholder="75000" 
+                                   class="w-full p-4 rounded-xl input-glass text-white text-lg focus:outline-none">
+                        </div>
+                    </div>
+                </div>
+                
+                <button onclick="calculateRevenue()" 
+                        class="w-full gradient-bg text-white py-4 rounded-xl font-bold text-xl button-hover-effect mb-8 relative z-10">
+                    <i class="fas fa-rocket mr-3"></i>Calculate Growth Potential
+                </button>
+                
+                <div id="calculatorResults" class="hidden">
+                    <div class="glass-card p-8 rounded-2xl border border-indigo-500/30">
+                        <h3 class="text-2xl font-bold mb-6 gradient-text text-center">
+                            <i class="fas fa-chart-line mr-3"></i>Your Revenue Optimization Forecast
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="text-center glass p-6 rounded-xl">
+                                <div class="text-3xl font-bold text-green-400 metric-counter mb-2" id="revenueIncrease">+$0</div>
+                                <div class="text-sm text-gray-400">Monthly Increase</div>
+                            </div>
+                            <div class="text-center glass p-6 rounded-xl">
+                                <div class="text-3xl font-bold text-blue-400 metric-counter mb-2" id="yearlyProjection">$0</div>
+                                <div class="text-sm text-gray-400">Annual Projection</div>
+                            </div>
+                            <div class="text-center glass p-6 rounded-xl">
+                                <div class="text-3xl font-bold text-purple-400 metric-counter mb-2" id="roiMultiple">0x</div>
+                                <div class="text-sm text-gray-400">Revenue Multiplier</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-6 lg:px-8 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-8">
+                <span class="glass px-6 py-2 rounded-full text-sm font-medium text-indigo-300 border border-indigo-500/30 mb-6 inline-block">
+                    <i class="fas fa-cogs mr-2"></i>Full-Stack Operations
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 gradient-text">Strategic Service Portfolio</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Comprehensive revenue engineering across every growth vector
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="servicesGrid">
+                <!-- Services will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="py-20 px-6 lg:px-8 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-8">
+                <span class="glass px-6 py-2 rounded-full text-sm font-medium text-green-300 border border-green-500/30 mb-6 inline-block">
+                    <i class="fas fa-trophy mr-2"></i>Proven Performance
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 gradient-text">Strategic Outcomes</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Real results from systematic revenue engineering
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-3xl interactive-card text-center group">
+                    <div class="service-icon w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-chart-line text-2xl text-indigo-400"></i>
+                    </div>
+                    <div class="text-4xl font-bold gradient-text mb-4 metric-counter">+500%+</div>
+                    <div class="text-lg text-gray-300 mb-3">DTC Revenue Growth</div>
+                    <div class="text-sm text-gray-400 mb-4">Electronics/Appliance • 6 months</div>
+                    <div class="glass p-3 rounded-lg">
+                        <div class="text-xs text-purple-300">Ad ROAS 600% • AOV: $49 → $300+</div>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-8 rounded-3xl interactive-card text-center group">
+                    <div class="service-icon w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fab fa-amazon text-2xl text-orange-400"></i>
+                    </div>
+                    <div class="text-4xl font-bold gradient-text mb-4">1,767% ROAS PPC</div>
+                    <div class="text-lg text-gray-300 mb-3">Amazon Optimization</div>
+                    <div class="text-sm text-gray-400 mb-4">Electronics • 1 month</div>
+                    <div class="glass p-3 rounded-lg">
+                        <div class="text-xs text-purple-300">#1 ranking • $250k/mrr in first 6 months</div>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-8 rounded-3xl interactive-card text-center group">
+                    <div class="service-icon w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-bullhorn text-2xl text-pink-400"></i>
+                    </div>
+                    <div class="text-4xl font-bold gradient-text mb-4">75% </div>
+                    <div class="text-lg text-gray-300 mb-3">Customer Retention</div>
+                    <div class="text-sm text-gray-400 mb-4">Food & Grocery • 24 months</div>
+                    <div class="glass p-3 rounded-lg">
+                        <div class="text-xs text-purple-300">Huge organic growth no ppc</div>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-8 rounded-3xl interactive-card text-center group">
+                    <div class="service-icon w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-sync-alt text-2xl text-green-400"></i>
+                    </div>
+                    <div class="text-4xl font-bold gradient-text mb-4">50% </div>
+                    <div class="text-lg text-gray-300 mb-3">Reduced Wasted Ad Spend</div>
+                    <div class="text-sm text-gray-400 mb-4">Coffee brand • 6 months</div>
+                    <div class="glass p-3 rounded-lg">
+                        <div class="text-xs text-purple-300">Reallocated into profitable ads</div>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-8 rounded-3xl interactive-card text-center group">
+                    <div class="service-icon w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-tachometer-alt text-2xl text-blue-400"></i>
+                    </div>
+                    <div class="text-4xl font-bold gradient-text mb-4">$15M</div>
+                    <div class="text-lg text-gray-300 mb-3">Quarterly Revenue</div>
+                    <div class="text-sm text-gray-400 mb-4">DTC brand</div>
+                    <div class="glass p-3 rounded-lg">
+                        <div class="text-xs text-purple-300">PPC & Conversion rate optimization</div>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-8 rounded-3xl interactive-card text-center group">
+                    <div class="service-icon w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-rocket text-2xl text-purple-400"></i>
+                    </div>
+                    <div class="text-4xl font-bold gradient-text mb-4">Full Ecommerce Infrastrcuture</div>
+                    <div class="text-lg text-gray-300 mb-3">$300k+ in organic sales</div>
+                    <div class="text-sm text-gray-400 mb-4"></div>
+                    <div class="glass p-3 rounded-lg">
+                        <div class="text-xs text-purple-300">No ad spend</div>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+    </section>
+
+    <!-- Contact Section - Simplified with Direct Communication -->
+    <section id="contact" class="py-20 px-6 lg:px-8 relative">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-8">
+                <span class="glass px-6 py-2 rounded-full text-sm font-medium text-amber-300 border border-amber-500/30 mb-6 inline-block">
+                    <i class="fas fa-handshake mr-2"></i>Strategic Partnership
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 gradient-text">Ready to Scale?</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                    Let's discuss how systematic revenue engineering can transform your brand's growth trajectory
+                </p>
+            </div>
+            
+            <div class="glass-strong p-12 rounded-3xl text-center">
+                <div class="mb-6">
+                    <h3 class="text-2xl font-bold text-white mb-4">Start the Conversation</h3>
+                    <p class="text-gray-300 max-w-2xl mx-auto">
+                        Every engagement begins with a confidential strategic consultation. Choose your preferred communication method below.
+                    </p>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row gap-6 justify-center mb-6">
+                    <a href="mailto:jason@gosellery.com?subject=Strategic Revenue Consultation&body=Hi Alex,%0D%0A%0D%0AI'm interested in discussing strategic revenue optimization for my brand.%0D%0A%0D%0ACompany:%0D%0ACurrent Monthly Revenue:%0D%0APrimary Growth Challenge:%0D%0A%0D%0ALooking forward to connecting." 
+                       class="contact-button gradient-bg text-white px-10 py-5 rounded-full font-bold text-lg flex items-center justify-center">
+                        <i class="fas fa-envelope mr-3 text-xl"></i>
+                        Email Consultation
+                    </a>
+                    <a href="https://wa.me/1234567890?text=Hi%20Alex%2C%20I%27m%20interested%20in%20strategic%20revenue%20optimization%20for%20my%20brand.%20Can%20we%20schedule%20a%20consultation%3F" 
+                       target="_blank"
+                       class="contact-button glass-card px-10 py-5 rounded-full font-bold text-lg flex items-center justify-center border border-green-500/30 hover:border-green-400/50">
+                        <i class="fab fa-whatsapp mr-3 text-xl text-green-400"></i>
+                        WhatsApp Direct
+                    </a>
+                </div>
+                
+                <div class="glass p-6 rounded-xl">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-400">
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-shield-alt mr-2 text-green-400"></i>
+                            Confidential discussions
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-clock mr-2 text-blue-400"></i>
+                            24-hour response time
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-handshake mr-2 text-purple-400"></i>
+                            Complimentary consultation
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 px-6 lg:px-8 border-t border-white/10 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row justify-between items-center">
+                <div class="mb-8 lg:mb-0">
+                    <div class="font-bold text-3xl gradient-text mb-4">Jason Acoca</div>
+                    <div class="flex space-x-8">
+                        <a href="mailto:alex@strategicrevenue.com" 
+                           class="text-gray-400 hover:text-purple-400 transition-colors flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>jason@gosellery.com
+                        </a>
+                        <a href="https://www.linkedin.com/in/jasonsacoca/" 
+                           class="text-gray-400 hover:text-purple-400 transition-colors flex items-center">
+                            <i class="fab fa-linkedin mr-2"></i>LinkedIn
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center lg:text-right">
+                    <p class="text-gray-400 mb-2">Strategic revenue engineering for ambitious brands</p>
+                    <p class="text-sm text-gray-500">© 2025 Jason Acoca. All client work confidential.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Services data
+        const services = [
+            {
+                title: "Amazon Ecosystem",
+                description: "1P/3P strategy optimization, Brand Registry, catalog excellence, A+ content, Amazon SEO, PPC with TACoS control",
+                icon: "fab fa-amazon"
+            },
+            {
+                title: "Paid Media Operations",
+                description: "Google Ads, Microsoft Ads, Meta, TikTok. Advanced bidding, incrementality testing, creative optimization",
+                icon: "fas fa-bullhorn"
+            },
+            {
+                title: "SEO & Content Systems",
+                description: "Technical SEO, programmatic content, digital PR, marketplace SEO, Core Web Vitals optimization",
+                icon: "fas fa-search"
+            },
+            {
+                title: "Conversion Engineering",
+                description: "Landing page optimization, checkout enhancement, mobile-first design, speed optimization",
+                icon: "fas fa-chart-line"
+            },
+            {
+                title: "Customer Retention",
+                description: "Lifecycle automation, loyalty programs, subscription optimization, community building",
+                icon: "fas fa-sync-alt"
+            },
+            {
+                title: "Data & Attribution",
+                description: "Server-side tracking, incrementality measurement, blended attribution, forecasting models",
+                icon: "fas fa-chart-pie"
+            }
+        ];
+
+        // Populate services
+        function populateServices() {
+            const servicesGrid = document.getElementById('servicesGrid');
+            services.forEach((service, index) => {
+                const serviceCard = document.createElement('div');
+                serviceCard.className = 'glass-card p-8 rounded-3xl interactive-card group opacity-0 translate-y-8';
+                serviceCard.innerHTML = `
+                    <div class="service-icon w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="${service.icon} text-2xl text-indigo-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 gradient-text">${service.title}</h3>
+                    <p class="text-gray-300 leading-relaxed">${service.description}</p>
+                `;
+                servicesGrid.appendChild(serviceCard);
+                
+                setTimeout(() => {
+                    serviceCard.classList.remove('opacity-0', 'translate-y-8');
+                    serviceCard.classList.add('animate-slide-up');
+                }, index * 100);
+            });
+        }
+
+        // Revenue Calculator
+        function calculateRevenue() {
+            const currentRevenue = parseFloat(document.getElementById('currentRevenue').value) || 0;
+            const currentCR = parseFloat(document.getElementById('currentCR').value) || 0;
+            const currentAOV = parseFloat(document.getElementById('currentAOV').value) || 0;
+            const monthlyTraffic = parseFloat(document.getElementById('monthlyTraffic').value) || 0;
+            
+            if (currentRevenue === 0 || currentCR === 0 || currentAOV === 0 || monthlyTraffic === 0) {
+                alert('Please complete all fields to generate your revenue forecast.');
+                return;
+            }
+            
+            const crImprovement = 1.75;
+            const aovImprovement = 1.3;
+            const trafficImprovement = 1.5;
+            
+            const newCR = currentCR * crImprovement;
+            const newAOV = currentAOV * aovImprovement;
+            const newTraffic = monthlyTraffic * trafficImprovement;
+            
+            const newRevenue = (newTraffic * (newCR / 100) * newAOV);
+            const revenueIncrease = newRevenue - currentRevenue;
+            const yearlyProjection = newRevenue * 12;
+            const roiMultiple = newRevenue / currentRevenue;
+            
+            document.getElementById('calculatorResults').classList.remove('hidden');
+            document.getElementById('calculatorResults').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            
+            animateCounter('revenueIncrease', 0, revenueIncrease, '+$', 2000);
+            animateCounter('yearlyProjection', 0, yearlyProjection, '$', 2500);
+            animateCounter('roiMultiple', 0, roiMultiple, '', 1500, 'x', 1);
+        }
+
+        function animateCounter(elementId, start, end, prefix = '', duration = 2000, suffix = '', decimals = 0) {
+            const element = document.getElementById(elementId);
+            const startTime = performance.now();
+            
+            function updateCounter(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const current = start + (end - start) * easeOutCubic(progress);
+                
+                if (decimals > 0) {
+                    element.textContent = prefix + current.toFixed(decimals) + suffix;
+                } else {
+                    element.textContent = prefix + Math.floor(current).toLocaleString() + suffix;
+                }
+                
+                if (progress < 1) {
+                    requestAnimationFrame(updateCounter);
+                }
+            }
+            
+            requestAnimationFrame(updateCounter);
+        }
+
+        function easeOutCubic(t) {
+            return 1 - Math.pow(1 - t, 3);
+        }
+
+        // Navigation scroll effects
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('shadow-2xl');
+            } else {
+                nav.classList.remove('shadow-2xl');
+            }
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Chess Game Implementation
+        let chessBoard = [];
+        let selectedSquare = null;
+        let currentPlayer = 'white';
+        let gameActive = true;
+
+        const initialBoard = [
+            ['r','n','b','q','k','b','n','r'],
+            ['p','p','p','p','p','p','p','p'],
+            [null,null,null,null,null,null,null,null],
+            [null,null,null,null,null,null,null,null],
+            [null,null,null,null,null,null,null,null],
+            [null,null,null,null,null,null,null,null],
+            ['P','P','P','P','P','P','P','P'],
+            ['R','N','B','Q','K','B','N','R']
+        ];
+
+        const pieceSymbols = {
+            'K': '♔', 'Q': '♕', 'R': '♖', 'B': '♗', 'N': '♘', 'P': '♙',
+            'k': '♚', 'q': '♛', 'r': '♜', 'b': '♝', 'n': '♞', 'p': '♟'
+        };
+
+        function initializeChess() {
+            chessBoard = initialBoard.map(row => [...row]);
+            const boardElement = document.getElementById('chessBoard');
+            boardElement.innerHTML = '';
+            
+            for (let row = 0; row < 8; row++) {
+                for (let col = 0; col < 8; col++) {
+                    const square = document.createElement('div');
+                    const isLight = (row + col) % 2 === 0;
+                    square.className = `chess-square ${isLight ? 'bg-amber-100' : 'bg-amber-800'} flex items-center justify-center text-2xl cursor-pointer hover:bg-opacity-80 transition-all`;
+                    square.dataset.row = row;
+                    square.dataset.col = col;
+                    
+                    const piece = chessBoard[row][col];
+                    if (piece) {
+                        square.textContent = pieceSymbols[piece];
+                        square.classList.add(piece === piece.toUpperCase() ? 'text-white' : 'text-gray-800');
+                    }
+                    
+                    square.addEventListener('click', () => handleSquareClick(row, col));
+                    boardElement.appendChild(square);
+                }
+            }
+            
+            updateGameStatus('Your turn - White to move');
+            updateInsights('Game started. Control the center and develop your pieces!');
+        }
+
+        function handleSquareClick(row, col) {
+            if (!gameActive) return;
+            
+            const square = document.querySelector(`[data-row="${row}"][data-col="${col}"]`);
+            
+            if (selectedSquare) {
+                // Attempt to move
+                if (selectedSquare.row === row && selectedSquare.col === col) {
+                    // Deselect
+                    clearSelection();
+                    return;
+                }
+                
+                if (makeMove(selectedSquare.row, selectedSquare.col, row, col)) {
+                    clearSelection();
+                    currentPlayer = currentPlayer === 'white' ? 'black' : 'white';
+                    
+                    if (currentPlayer === 'black') {
+                        updateGameStatus('AI thinking...');
+                        setTimeout(() => {
+                            makeAIMove();
+                            currentPlayer = 'white';
+                            updateGameStatus('Your turn - White to move');
+                        }, 1000);
+                    }
+                } else {
+                    clearSelection();
+                }
+            } else {
+                // Select piece
+                const piece = chessBoard[row][col];
+                if (piece && ((currentPlayer === 'white' && piece === piece.toUpperCase()) || 
+                             (currentPlayer === 'black' && piece === piece.toLowerCase()))) {
+                    selectedSquare = { row, col };
+                    square.classList.add('ring-2', 'ring-indigo-400');
+                }
+            }
+        }
+
+        function makeMove(fromRow, fromCol, toRow, toCol) {
+            const piece = chessBoard[fromRow][fromCol];
+            if (!piece) return false;
+            
+            // Basic move validation (simplified)
+            if (isValidMove(piece, fromRow, fromCol, toRow, toCol)) {
+                chessBoard[toRow][toCol] = piece;
+                chessBoard[fromRow][fromCol] = null;
+                updateBoard();
+                
+                const moveNotation = `${String.fromCharCode(97 + fromCol)}${8 - fromRow} → ${String.fromCharCode(97 + toCol)}${8 - toRow}`;
+                updateInsights(`Move: ${moveNotation}. ${getPositionAnalysis()}`);
+                return true;
+            }
+            return false;
+        }
+
+        function isValidMove(piece, fromRow, fromCol, toRow, toCol) {
+            // Simplified validation - in a real game, this would be much more complex
+            if (toRow < 0 || toRow > 7 || toCol < 0 || toCol > 7) return false;
+            if (fromRow === toRow && fromCol === toCol) return false;
+            
+            const targetPiece = chessBoard[toRow][toCol];
+            if (targetPiece && ((piece === piece.toUpperCase()) === (targetPiece === targetPiece.toUpperCase()))) {
+                return false; // Can't capture own piece
+            }
+            
+            return true; // Simplified - allow most moves
+        }
+
+        function makeAIMove() {
+            // Simple AI: make a random valid move
+            const blackPieces = [];
+            for (let row = 0; row < 8; row++) {
+                for (let col = 0; col < 8; col++) {
+                    const piece = chessBoard[row][col];
+                    if (piece && piece === piece.toLowerCase()) {
+                        blackPieces.push({ piece, row, col });
+                    }
+                }
+            }
+            
+            if (blackPieces.length > 0) {
+                const randomPiece = blackPieces[Math.floor(Math.random() * blackPieces.length)];
+                const possibleMoves = [];
+                
+                for (let row = 0; row < 8; row++) {
+                    for (let col = 0; col < 8; col++) {
+                        if (isValidMove(randomPiece.piece, randomPiece.row, randomPiece.col, row, col)) {
+                            possibleMoves.push({ toRow: row, toCol: col });
+                        }
+                    }
+                }
+                
+                if (possibleMoves.length > 0) {
+                    const randomMove = possibleMoves[Math.floor(Math.random() * possibleMoves.length)];
+                    makeMove(randomPiece.row, randomPiece.col, randomMove.toRow, randomMove.toCol);
+                }
+            }
+        }
+
+        function updateBoard() {
+            const squares = document.querySelectorAll('.chess-square');
+            squares.forEach((square, index) => {
+                const row = Math.floor(index / 8);
+                const col = index % 8;
+                const piece = chessBoard[row][col];
+                
+                square.textContent = piece ? pieceSymbols[piece] : '';
+                square.className = square.className.replace(/text-\w+-\d+/g, '');
+                if (piece) {
+                    square.classList.add(piece === piece.toUpperCase() ? 'text-white' : 'text-gray-800');
+                }
+            });
+        }
+
+        function clearSelection() {
+            selectedSquare = null;
+            document.querySelectorAll('.chess-square').forEach(square => {
+                square.classList.remove('ring-2', 'ring-indigo-400');
+            });
+        }
+
+        function updateGameStatus(status) {
+            document.getElementById('gameStatus').textContent = status;
+        }
+
+        function updateInsights(insights) {
+            document.getElementById('chessInsights').textContent = insights;
+        }
+
+        function getPositionAnalysis() {
+            const analyses = [
+                "Strong central control developing.",
+                "Tactical opportunities emerging.",
+                "Positional advantage building.",
+                "Strategic depth increasing.",
+                "Complex position arising."
+            ];
+            return analyses[Math.floor(Math.random() * analyses.length)];
+        }
+
+        function resetChess() {
+            gameActive = true;
+            currentPlayer = 'white';
+            selectedSquare = null;
+            initializeChess();
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            populateServices();
+            initializeChess();
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96dc546eb65b0e82',t:'MTc1NDk2MzUwOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
